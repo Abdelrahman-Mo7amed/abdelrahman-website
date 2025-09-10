@@ -1,0 +1,198 @@
+.testimonialsSection {
+  padding: 60px 20px;
+  text-align: center;
+  background: var(--background-gradient);
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--title-exp);
+  margin-bottom: 30px;
+  letter-spacing: -0.5px;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.navBtn {
+  background: var(--portfolio-secondary);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.navBtn:hover {
+  transform: scale(1.1);
+}
+
+.cardsWrapper {
+  overflow: hidden;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.cardsTrack {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.card {
+  flex: 0 0 calc(33.33% - 20px); /* 3 كروت في الصف */
+  margin: 0 10px;
+  background: var(--card-bg);
+  border: 1px solid var(--portfolio-border);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 15px var(--portfolio-shadow);
+  text-align: left;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px var(--portfolio-shadow);
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.starFilled {
+  color: gold;
+  fill: gold;
+}
+
+.starEmpty {
+  color: #ccc;
+}
+
+.content {
+  font-style: italic;
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+  letter-spacing: -0.3px;
+  flex-grow: 1;
+}
+
+.userInfo {
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+  margin-top: auto;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.addCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  color: var(--title-exp);
+  text-align: center;
+  font-weight: bold;
+}
+
+.addCard:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.plusIcon {
+  margin-bottom: 10px;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background: #d3caff;
+  padding: 2rem;
+  width: 90%;
+  max-width: 650px;
+  position: relative;
+  animation: fadeInUp 0.3s ease-in-out;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #444;
+  transition: color 0.2s;
+}
+
+.closeBtn:hover {
+  color: #000;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsive */
+@media (max-width: 1024px) {
+  .card {
+    flex: 0 0 calc(50% - 20px); /* كارتين */
+  }
+}
+
+@media (max-width: 640px) {
+  .card {
+    flex: 0 0 100%; /* كارت واحد */
+    margin: 0 5px;
+  }
+
+  .slider {
+    gap: 8px;
+  }
+}

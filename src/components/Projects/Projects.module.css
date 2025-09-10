@@ -1,0 +1,218 @@
+.portfolioSection {
+    padding: 80px 20px;
+    background: var(--portfolio-bg);
+  }
+  
+  .portfolioContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+  }
+  
+  .portfolioContainer.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .portfolioHeader {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .portfolioBadge {
+    background: var(--portfolio-secondary);
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .portfolioTitle {
+    font-size: 2.5rem;
+    color: var(--portfolio-text-primary);
+    margin: 15px 0;
+  }
+  
+  .portfolioSubtitle {
+    color: var(--portfolio-text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  /* Tabs */
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .tabButton {
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid var(--portfolio-border);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--portfolio-text-primary);
+  }
+  
+  .tabButton.active,
+  .tabButton:hover {
+    background: var(--portfolio-primary);
+    color: #fff;
+    border-color: var(--portfolio-primary);
+  }
+  
+  /* Projects Grid */
+  .projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+  }
+  
+  .projectCard {
+    background: var(--portfolio-card-bg);
+    border: 1px solid var(--portfolio-border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .projectCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px var(--portfolio-shadow);
+  }
+  
+  .projectImage img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform .4s ease;
+  }
+  
+  .projectCard:hover .projectImage img {
+    transform: scale(1.05);
+  }
+  
+  .projectContent {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .projectContent h3 {
+    font-size: 20px;
+    color: var(--portfolio-text-primary);
+    margin-bottom: 10px;
+  }
+  
+  .projectContent p {
+    font-size: 14px;
+    color: var(--portfolio-text-secondary);
+    margin-bottom: 15px;
+  }
+  
+  .techList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .techBadge {
+    padding: 4px 12px;
+    background: color-mix(in srgb, var(--portfolio-secondary) 75%, transparent);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 12px;
+    border: 1px solid var(--portfolio-border);
+  }
+  
+  .projectButtons {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+  }
+  
+  .btn {
+    flex: 1;
+    display: flex;         
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--portfolio-primary);
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1.5px solid var(--portfolio-border);
+  }
+  
+  .btn:hover {
+    background: color-mix(in srgb, var(--portfolio-primary) 80%, black);
+  }
+  
+  .icon {
+    display: block;
+  }
+  
+
+  .btn.outline {
+    background: transparent;
+    border: 1.4px solid var(--portfolio-third);
+    color: var(--portfolio-text-primary);
+  }
+  
+  .btn.outline:hover {
+    background: var(--portfolio-third);
+    color: #fff;
+  }
+
+    /* Visible animation */
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Active tab button */
+  .active {
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  /* Outline button style */
+  .outline {
+    background: transparent;
+    border: 2px solid var(--portfolio-third);
+    color: var(--portfolio-third);
+  }
+  
+  .outline:hover {
+    background: var(--primary-color);
+    color: #fff;
+  }
+
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .portfolioTitle {
+      font-size: 2rem;
+    }
+    .projectImage img {
+      height: 180px;
+    }
+  }
+  

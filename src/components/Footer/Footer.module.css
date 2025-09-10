@@ -1,0 +1,168 @@
+.footer {
+  position: relative;
+  background-color: var(--foot-bg);
+  color: var(--foot-text);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.topSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.column {
+  text-align: left;
+}
+
+.columnCenter {
+  text-align: center;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--foot-heading);
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text-light);
+  font-size: 15.5px;
+  letter-spacing: -0.4px;
+  padding: 7.5px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-align: left;
+}
+
+.link:hover {
+  color: var(--accent-color);
+}
+
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.socialIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  background: var(--foot-social-bg);
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.2s ease;
+  color: var(--foot-heading);
+}
+
+.socialIcon:hover {
+  background: var(--foot-link-hover);
+  transform: scale(1.1);
+}
+
+.bottomSection {
+  border-top: 1px solid var(--foot-border);
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.copy {
+  font-size: 0.875rem;
+  color: var(--foot-text-muted);
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+.bio {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  letter-spacing: -0.3px;
+  text-align: center;
+  color: var(--foot-bio);
+  transition: color 0.3s ease;
+}
+
+.bio:hover {
+  color: var(--foot-bio-hover);
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 768px) {
+  .topSection {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .textRight,
+  .column,
+  .columnCenter {
+    text-align: center;
+  }
+
+  .bottomSection {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .bio {
+    font-size: 0.85rem;
+  }
+
+  .socials {
+    gap: 0.75rem;
+  }
+
+  .socialIcon {
+    padding: 0.4rem;
+  }
+}

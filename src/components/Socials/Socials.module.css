@@ -1,0 +1,22 @@
+.socials {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .socials a {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    transition: color 0.3s;
+  }
+  
+  .socials a:hover {
+    color: var(--primary-color);
+  }
+
+
+  @media (max-width: 1190px) {
+    .socials {
+        justify-content: center;
+      }
+  }

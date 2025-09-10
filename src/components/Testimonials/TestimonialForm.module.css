@@ -1,0 +1,123 @@
+.form {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--title-exp);
+  margin-bottom: 1rem;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.error {
+  background: rgba(255, 0, 0, 0.1);
+  color: #d33;
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--text-primary);
+}
+
+.field input,
+.field textarea {
+  padding: 0.7rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--border-color) 50%, transparent);
+  border-radius: 8px;
+  background: var(--overlay-color);
+  font-size: 0.95rem;
+  transition: 0.2s ease-in-out;
+  font-family: "Inter";
+  letter-spacing: -0.5px;
+  color: white;
+  
+  box-shadow: 0px 0px 0px 0px #000;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #ffffff;
+  opacity: 0.7;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border: 1.5px solid var(--primary-color);
+  outline: none;
+  box-shadow: 0px 0px 0px 3px #8f78ffce;
+}
+
+.stars {
+  display: flex;
+  gap: 0.4rem;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.star {
+  color: #ccc;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.star:hover {
+  transform: scale(1.2);
+  color: var(--secondary-color);
+}
+
+.star svg {
+  stroke: var(--text-secondary);
+}
+
+.star.active svg {
+  fill: gold;
+  stroke: gold;
+}
+
+.active {
+  color: #ffcc00;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background: var(--button-gradient);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+
+  color: var(--text-primary);
+}
