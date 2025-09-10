@@ -182,3 +182,13 @@ button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
+
+
+* {
+  box-sizing: border-box; /* ensures padding + border don’t add extra width */
+}
+
+html, body {
+  max-width: 100vw;   /* never exceed screen width */
+  overflow-x: hidden; /* stop horizontal scrollbar */
+}
