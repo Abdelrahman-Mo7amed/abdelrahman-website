@@ -7,7 +7,7 @@ export function useTheme() {
 }
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("light"); // default = light
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -15,8 +15,9 @@ export function ThemeProvider({ children }) {
       setTheme(savedTheme);
       document.documentElement.classList.toggle("dark", savedTheme === "dark");
     } else {
-      setTheme("dark");
-      document.documentElement.classList.add("dark");
+      // default: light mode
+      setTheme("light");
+      document.documentElement.classList.remove("dark");
     }
   }, []);
 
